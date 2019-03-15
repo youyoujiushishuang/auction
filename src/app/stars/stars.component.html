@@ -6,4 +6,5 @@
 5.如何将商品的星级评价传递给星级评价组件?商品组件中有每一个商品的详细信息,其中包括星级评价,所以需要将父组件中的数据传递给子组件,使用 @Input() 属性-->
 <p>
   <span class="glyphicon glyphicon-star " *ngFor="let star of stars" [class.glyphicon-star-empty] = "star"></span>
+  <span>{{rating}}星</span>
 </p>

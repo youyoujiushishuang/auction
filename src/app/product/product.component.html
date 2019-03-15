@@ -7,7 +7,8 @@
       <p>{{product.desc}}</p>
     </div>
     <div>
-      <app-stars></app-stars>
+      <!-- 表示app-star组件张红的rating属性的数据应该是当前组件的product.rating属性传递过去的 -->
+      <app-stars [rating]="product.rating"></app-stars>
     </div>
   </div>
 </div>
