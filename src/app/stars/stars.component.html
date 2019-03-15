@@ -1,3 +1,9 @@
+<!-- 星级评价组件的问题:
+1.如何实现一颗星星? 使用bootstrap的一个字体图标 glyphicon glyphicon-star
+2.如何显示空心的星星? 再加上一个样式 glyphicon-star-empty
+3.如何显示五颗星星? 使用数据驱动,在后台需要一个五个元素的数组
+4.如何让五颗星星里面有的空心有的实心? 使用属性绑定中的特例:样式绑定 :[calss.glyphicon-star-empty] = "star" : 表明这一颗星星是实心的还是空心的是由star决定的, star是true就绑定这个样式,为空心,star为false的时候是实心
+5.如何将商品的星级评价传递给星级评价组件?商品组件中有每一个商品的详细信息,其中包括星级评价,所以需要将父组件中的数据传递给子组件,使用 @Input() 属性-->
 <p>
-  stars works!
+  <span class="glyphicon glyphicon-star " *ngFor="let star of stars" [class.glyphicon-star-empty] = "star"></span>
 </p>
