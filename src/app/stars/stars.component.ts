@@ -17,7 +17,12 @@ export class StarsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.stars = [false,false,false,false,false]
+    // this.stars = [false,false,false,false,false]
+    this.stars = []
+    for(let i = 1; i <= 5; i++){
+      //如果某个商品的rating为3.5 那么这个商品的stars数组就是[false,false,false,true,true],就是前三个实心,后两个空心
+      this.stars.push(i > this.rating)
+    }
   }
 
 }

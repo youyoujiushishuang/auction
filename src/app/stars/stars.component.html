@@ -3,7 +3,8 @@
 2.如何显示空心的星星? 再加上一个样式 glyphicon-star-empty
 3.如何显示五颗星星? 使用数据驱动,在后台需要一个五个元素的数组
 4.如何让五颗星星里面有的空心有的实心? 使用属性绑定中的特例:样式绑定 :[calss.glyphicon-star-empty] = "star" : 表明这一颗星星是实心的还是空心的是由star决定的, star是true就绑定这个样式,为空心,star为false的时候是实心
-5.如何将商品的星级评价传递给星级评价组件?商品组件中有每一个商品的详细信息,其中包括星级评价,所以需要将父组件中的数据传递给子组件,使用 @Input() 属性-->
+5.如何将商品的星级评价传递给星级评价组件?商品组件中有每一个商品的详细信息,其中包括星级评价,所以需要将父组件中的数据传递给子组件,使用 @Input() 属性
+6.如何根据星级来决定这一颗星星是空心的还是实心的?空心和实心由stars数组中的每一项决定的,所以要根据rating的数据来决定stars数组里面的元素是true还是false-->
 <p>
   <span class="glyphicon glyphicon-star " *ngFor="let star of stars" [class.glyphicon-star-empty] = "star"></span>
   <span>{{rating}}星</span>
